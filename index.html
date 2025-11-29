@@ -1,0 +1,331 @@
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Имя Модели | Топ- и Фотомодель, Арт, Beauty, Промо</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* --- 1. ПЕРЕМЕННЫЕ И СБРОС --- */
+            :root {
+                --color-dark: #121212; /* Глубокий темный фон */
+                --color-light: #f5f5f5; /* Светлый текст */
+                --color-accent: #e0b06b; /* Золотистый/Бронзовый акцент */
+                --font-main: "Montserrat", sans-serif;
+                --font-size-base: 1.1rem;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: var(--font-main);
+                line-height: 1.6;
+                color: var(--color-light);
+                background: var(--color-dark);
+                min-height: 100vh;
+            }
+
+            /* --- 2. ОБЩИЕ СТИЛИ КОНТЕНТА --- */
+            .container {
+                max-width: 1300px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 50px;
+                color: var(--color-accent);
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            /* --- 3. ШАПКА (HERO) --- */
+            .hero {
+                padding: 150px 20px;
+                text-align: center;
+                background: rgba(
+                    0,
+                    0,
+                    0,
+                    0.4
+                ); /* Полупрозрачный фон для контраста, если добавите фоновое изображение */
+            }
+
+            .hero h1 {
+                font-size: 4.5rem;
+                margin-bottom: 10px;
+                color: var(--color-light);
+                font-weight: 700;
+                letter-spacing: 2px;
+            }
+
+            .hero p {
+                font-size: 1.6rem;
+                color: var(--color-accent);
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+
+            /* --- 4. ОБО МНЕ / ПАРАМЕТРЫ --- */
+            #about {
+                background: #1e1e1e;
+            }
+
+            .about-content {
+                display: flex;
+                gap: 40px;
+                align-items: flex-start;
+            }
+
+            .about-text,
+            .about-details {
+                flex: 1;
+                font-size: var(--font-size-base);
+            }
+
+            .about-details ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .about-details li {
+                padding: 10px 0;
+                border-bottom: 1px solid #333;
+            }
+
+            .about-details strong {
+                color: var(--color-accent);
+                min-width: 100px;
+                display: inline-block;
+            }
+
+            /* --- 5. ГАЛЕРЕЯ / ПОРТФОЛИО --- */
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+
+            .gallery-item {
+                overflow: hidden;
+                border-radius: 5px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease;
+            }
+
+            .gallery-item:hover {
+                transform: scale(1.03);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 400px; /* Фиксированная высота для единообразия */
+                object-fit: cover; /* Обрезка, чтобы заполнить элемент */
+                display: block;
+                transition: opacity 0.3s ease;
+            }
+
+            .gallery-item img:hover {
+                opacity: 0.8;
+            }
+
+            /* --- 6. КОНТАКТЫ --- */
+            #contact {
+                text-align: center;
+                background: #1e1e1e;
+            }
+
+            .contact-links a {
+                display: inline-block;
+                margin: 0 15px;
+                padding: 12px 30px;
+                background: var(--color-accent);
+                color: var(--color-dark);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 700;
+                border-radius: 40px;
+                transition:
+                    background 0.3s ease,
+                    transform 0.3s ease;
+            }
+
+            .contact-links a:hover {
+                background: #fff;
+                transform: translateY(-3px);
+            }
+
+            .contact-info p {
+                margin-top: 30px;
+                font-size: var(--font-size-base);
+            }
+
+            /* --- 7. ФУТЕР --- */
+            footer {
+                text-align: center;
+                padding: 30px;
+                font-size: 0.9rem;
+                color: #555;
+                border-top: 1px solid #333;
+            }
+
+            /* --- 8. АДАПТИВНОСТЬ --- */
+            @media (max-width: 900px) {
+                .hero h1 {
+                    font-size: 3rem;
+                }
+                .hero p {
+                    font-size: 1.2rem;
+                }
+                .about-content {
+                    flex-direction: column;
+                }
+                .gallery-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="hero">
+            <div class="container">
+                <h1>АННА ИВАНОВА</h1>
+                <p>Топ-модель | Фриланс | ART | BEAUTY</p>
+            </div>
+        </header>
+
+        <main>
+            <section id="about">
+                <div class="container">
+                    <h2>Профиль Модели</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                Я — Анна Иванова, профессиональная фотомодель с
+                                опытом работы во всех ключевых направлениях:
+                                beauty, промоушен, fashion и art-проекты.
+                                Работаю на условиях фриланса, гарантируя высокий
+                                уровень профессионализма, дисциплину и
+                                уникальную способность воплощать самые сложные
+                                образы.
+                            </p>
+                            <p>
+                                Готова к сотрудничеству с фотографами,
+                                дизайнерами и агентствами для коммерческих,
+                                рекламных и творческих съемок по всему миру.
+                            </p>
+                        </div>
+
+                        <div class="about-details">
+                            <ul>
+                                <li><strong>Рост:</strong> 178 см</li>
+                                <li><strong>Вес:</strong> 55 кг</li>
+                                <li>
+                                    <strong>Параметры:</strong> 88 / 60 / 90
+                                </li>
+                                <li><strong>Размер одежды:</strong> S (42)</li>
+                                <li><strong>Размер обуви:</strong> 39</li>
+                                <li>
+                                    <strong>Цвет волос:</strong> Каштановый
+                                    (натуральный)
+                                </li>
+                                <li><strong>Цвет глаз:</strong> Зеленый</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <div class="container">
+                    <h2>Портфолио: Избранные Работы</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1543615462-895781a8b16a?w=400&h=400&fit=crop&q=80"
+                                alt="Beauty съемка"
+                            />
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1574347201648-936b72a6b47c?w=400&h=400&fit=crop&q=80"
+                                alt="Art проект"
+                            />
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=400&h=400&fit=crop&q=80"
+                                alt="Fashion съемка"
+                            />
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1558237593-b8b28f738914?w=400&h=400&fit=crop&q=80"
+                                alt="Промо съемка"
+                            />
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1582035201469-bd9b7f525547?w=400&h=400&fit=crop&q=80"
+                                alt="ЧБ фото"
+                            />
+                        </div>
+                        <div class="gallery-item">
+                            <img
+                                src="https://images.unsplash.com/photo-1534351318049-75c6c0683056?w=400&h=400&fit=crop&q=80"
+                                alt="Студийный портрет"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <h2>Связь и Бронирование</h2>
+                    <div class="contact-links">
+                        <a href="mailto:your_email@example.com"
+                            >Написать E-mail</a
+                        >
+                        <a
+                            href="https://instagram.com/your_model_account"
+                            target="_blank"
+                            >Instagram (Букинг)</a
+                        >
+                        <a
+                            href="https://t.me/your_telegram_handle"
+                            target="_blank"
+                            >Telegram</a
+                        >
+                    </div>
+                    <div class="contact-info">
+                        <p>
+                            Для запроса PDF-бука, TFP или обсуждения
+                            нестандартных арт-проектов, пожалуйста, свяжитесь со
+                            мной по электронной почте или через Telegram. Ответ
+                            в течение 24 часов.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>&copy; 2024 Анна Иванова. Дизайн и концепция.</footer>
+    </body>
+</html>
